@@ -1,0 +1,2045 @@
+{
+	"info": {
+		"_postman_id": "9c60294c-2a11-4d4d-8453-ea601e961744",
+		"name": "Evento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24204450",
+		"_collection_link": "https://alqahera.postman.co/workspace/Epsilon~c8c91194-bcc6-4e45-9000-03b6f173ad29/collection/24204450-9c60294c-2a11-4d4d-8453-ea601e961744?action=share&source=collection_link&creator=24204450"
+	},
+	"item": [
+		{
+			"name": "Admin Dashboard",
+			"item": [
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "Get all items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/admin/items?category=decoration",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"items"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "decoration"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get all items",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/admin/items?category=decoration",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "decoration"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "179"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b3-/1/JvFVFg7eR+Y0qmUssBH7+vZg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:16:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 2,\n                \"title\": \"Decoration Title \",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"decoration\"\n            }\n        ]\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Get one item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/admin/items/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get one item",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/admin/items/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "176"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b0-WEVm3v//3TPS9zS2GaiWn/D/xkc\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:17:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"item\": {\n            \"id\": 2,\n            \"title\": \"Decoration Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"image\": null,\n            \"category\": \"decoration\"\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Item",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "catering",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "catering",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Mostafa Nassr/Desktop/test/1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9000/admin/items/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"items",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create item \"decoration\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Decoration Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"decoration\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "288"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"120-Ozi19zuJn2nYqi5tBJLiWRvb4l8\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:12:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 2,\n            \"title\": \"Decoration Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"decoration\",\n            \"updatedAt\": \"2024-05-21T21:12:56.314Z\",\n            \"createdAt\": \"2024-05-21T21:12:56.314Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create item \"photography\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Photography Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"photography\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "290"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"122-y1hB15J7mrtaIl2vH/EuKRq0wkI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:13:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 3,\n            \"title\": \"Photography Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"photography\",\n            \"updatedAt\": \"2024-05-21T21:13:49.395Z\",\n            \"createdAt\": \"2024-05-21T21:13:49.395Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create item \"workshop\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Workshop Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"workshop\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "284"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11c-ApzMRgw9b3npYqUI/BikeP7RBAo\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:14:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 4,\n            \"title\": \"Workshop Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"workshop\",\n            \"updatedAt\": \"2024-05-21T21:14:18.477Z\",\n            \"createdAt\": \"2024-05-21T21:14:18.477Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create item \"concert\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Concert Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"concert\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "282"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11a-vXobVaVH7n6GZ3ccgpFQM0gsV1A\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:14:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 5,\n            \"title\": \"Concert Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"concert\",\n            \"updatedAt\": \"2024-05-21T21:14:55.602Z\",\n            \"createdAt\": \"2024-05-21T21:14:55.602Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create item \"place\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Place Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"place\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "278"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"116-s0/uBF8YDv2YV826qN6eT4StCxI\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:15:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 6,\n            \"title\": \"Place Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"place\",\n            \"updatedAt\": \"2024-05-21T21:15:27.066Z\",\n            \"createdAt\": \"2024-05-21T21:15:27.066Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create item \"catering\"",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"Catering Title \",\r\n    \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n    \"price\": 5000,\r\n    \"category\": \"catering\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "284"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"11c-Rynd+ev/Kt96bN6cKS85aI/j9Fg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:15:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 7,\n            \"title\": \"Catering Title \",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"category\": \"catering\",\n            \"updatedAt\": \"2024-05-21T21:15:53.780Z\",\n            \"createdAt\": \"2024-05-21T21:15:53.780Z\"\n        }\n    },\n    \"success\": true\n}"
+								},
+								{
+									"name": "Create Item",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "catering",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "5000",
+													"type": "text"
+												},
+												{
+													"key": "category",
+													"value": "catering",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/C:/Users/Mostafa Nassr/Desktop/test/1.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "310"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"136-Fi4ql2TqG3qqcSfE7KRxg/K+J2U\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:46:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been created successfully\",\n    \"item\": {\n        \"item\": {\n            \"id\": 19,\n            \"title\": \"catering\",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": \"5000\",\n            \"category\": \"catering\",\n            \"image\": \"image-1716328016973-998358035\",\n            \"updatedAt\": \"2024-05-21T21:46:56.976Z\",\n            \"createdAt\": \"2024-05-21T21:46:56.976Z\"\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Update item",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "catering",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "5000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "catering",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/Mostafa Nassr/Desktop/test/avengers.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9000/admin/items/:id/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"items",
+										":id",
+										"update"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "19"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Update item",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"test\",\r\n    \"description\": \"tttttttttt\",\r\n    \"price\": 50\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/:id/update",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												":id",
+												"update"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "256"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"100-7NVHE03slywbxpty4IC8XJrNW0E\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:17:24 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been updated successfully\",\n    \"data\": {\n        \"item\": {\n            \"id\": 2,\n            \"title\": \"test\",\n            \"description\": \"tttttttttt\",\n            \"price\": 50,\n            \"image\": null,\n            \"category\": \"decoration\",\n            \"createdAt\": \"2024-05-21T21:12:56.000Z\",\n            \"updatedAt\": \"2024-05-21T21:17:24.392Z\"\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete item",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/admin/items/:id/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"items",
+										":id",
+										"delete"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Delete item",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/items/:id/delete",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"items",
+												":id",
+												"delete"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"32-JYC6Mo025pZkLzKNex2EGewRuL0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:09:55 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been deleted\",\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Auth Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/admin/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"admin",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/admin/auth/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"admin",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "377"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"179-c6FDlcZyJqz+qcdPWBqspAAY6As\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 21:07:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"admin\": {\n            \"id\": 1,\n            \"username\": \"admin\",\n            \"email\": \"admin@gmail.com\",\n            \"password\": \"$2b$10$QA/17utY0De.0uYHNCqhmOrqUe7WZOJcAQ5bCKWUyilvYRikbHo2W\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJhZG1pbiI6eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20ifSwiaWF0IjoxNzE2MzI1NjI5LCJleHAiOjE3MTYzNTQ0Mjl9.DaxPL-eiYKuCyfHWO4Vkx0q6q_P7cvUe10nuYyOk6po\"\n    },\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Web APIs",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/api/auth/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "290"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"122-4X4R9mYutz4V7fkpnCnmgn5BWrk\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:01:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"user\",\n            \"email\": \"user@gmail.com\",\n            \"isActive\": true\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6InVzZXJAZ21haWwuY29tIn0sImlhdCI6MTcxNjMyODkwNSwiZXhwIjoxNzE2MzU3NzA1fQ.rjVlpT8hYJmqbrMQZdoWFSeYQqJtABD34UDdb-Dtt4s\"\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"user\",\r\n    \"email\":\"user3@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Register",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"user\",\r\n    \"email\":\"user3@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/api/auth/register",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"auth",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "175"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"af-0SpktC53UdIaBWZjNUMMqHFZ9ko\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:03:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"user\": {\n            \"isActive\": true,\n            \"id\": 3,\n            \"name\": \"user\",\n            \"email\": \"user3@gmail.com\",\n            \"updatedAt\": \"2024-05-21T22:03:02.298Z\",\n            \"createdAt\": \"2024-05-21T22:03:02.298Z\"\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Me (get current logged in user)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/users/me",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"users",
+										"me"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Me (get current logged in user)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/users/me",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"users",
+												"me"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "96"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"60-a79/kQDynjoE4yTdhq4vsFFekU4\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:04:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"user\",\n            \"email\": \"user@gmail.com\",\n            \"isActive\": true\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Items",
+					"item": [
+						{
+							"name": "Add item to basket",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items/:id/add-to-basket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										":id",
+										"add-to-basket"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "43"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add item to basket",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/items/:id/add-to-basket",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items",
+												":id",
+												"add-to-basket"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "8"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "58"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3a-EIH2Ua/GPUZJHPDZdXEnGx23YOg\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:23:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been added to basket\",\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove item from basket",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items/:id/remove-from-basket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										":id",
+										"remove-from-basket"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "49"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove item from basket",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/items/:id/remove-from-basket",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items",
+												":id",
+												"remove-from-basket"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "49"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "62"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3e-P+QXgui/2PO8HauvnJMUaCqThKE\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 23 May 2024 20:58:01 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"item has been removed from basket\",\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Checkout basket",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"eventDate\": \"2024-05-09\",\r\n    \"eventTime\": \"13:00\",\r\n    \"address\": \"dddd\",\r\n    \"phone\": \"01112165361\",\r\n    \"paymentMethod\": \"cash\",\r\n    \"comment\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9000/api/items/basket/checkout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										"basket",
+										"checkout"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Checkout basket",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"eventDate\": \"2024-05-09\",\r\n    \"eventTime\": \"13:00\",\r\n    \"address\": \"dddd\",\r\n    \"phone\": \"01112165361\",\r\n    \"paymentMethod\": \"cash\",\r\n    \"comment\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:9000/api/items/basket/checkout",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items",
+												"basket",
+												"checkout"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "44"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"2c-kdaZB94mQ94qTAxU2lqNYel8Tos\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 23 May 2024 22:36:36 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"order submitted\",\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Get items by category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items?category=catering",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "catering"
+										},
+										{
+											"key": "search",
+											"value": "Ketab",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get items by category",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/items?category=catering",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items"
+											],
+											"query": [
+												{
+													"key": "category",
+													"value": "catering"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1714"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6b2-fafvUFChEXzV4PrJQfKHDkSpCBs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:22:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 19,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": \"image-1716328133821-87593616\",\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 18,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 17,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": \"image-1716327849187-194155313\",\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 16,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 15,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 14,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 13,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 12,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 11,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 10,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 9,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 8,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"Catering Title \",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\"\n            }\n        ]\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Items best seller",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items/best-seller",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										"best-seller"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get one item",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get one item",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/items/:id",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "8"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "155"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"9b-Ro59Qbwsf7SZGJMJSuxSEqCAAAY\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:23:17 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"item\": {\n            \"id\": 8,\n            \"title\": \"catering\",\n            \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n            \"price\": 5000,\n            \"image\": null,\n            \"category\": \"catering\"\n        }\n    },\n    \"success\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "Get user basket",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9000/api/items/basket",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"items",
+										"basket"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get user basket",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9000/api/items/basket",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9000",
+											"path": [
+												"api",
+												"items",
+												"basket"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "359"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"167-k8EQxwPZHxDphzX5XnAb3fkPa4M\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 21 May 2024 22:24:50 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"basket\": [\n            {\n                \"id\": 8,\n                \"title\": \"catering\",\n                \"description\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n                \"price\": 5000,\n                \"image\": null,\n                \"category\": \"catering\",\n                \"createdAt\": \"2024-05-21T21:36:08.000Z\",\n                \"updatedAt\": \"2024-05-21T21:36:08.000Z\",\n                \"Basket\": {\n                    \"userId\": 1,\n                    \"itemId\": 8,\n                    \"createdAt\": \"2024-05-21T22:23:56.000Z\",\n                    \"updatedAt\": \"2024-05-21T22:23:56.000Z\",\n                    \"ItemId\": 8\n                }\n            }\n        ]\n    },\n    \"success\": true\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
