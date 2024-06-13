@@ -1,0 +1,12 @@
+BACK END NOTES:
+1. create database in phpMyAdmin named "evento"
+2. open a cmd for backend project
+3. follow these commands:
+- npm install
+- npx sequelize db:migrate
+- npx sequelize db:seed:all
+- npm run start
+
+4. you will get these two types of users after applying seeds
+- User -> (email: user@gmail.com) (password: 123)
+- Admin -> (email: admin@gmail.com) (password: 123)
