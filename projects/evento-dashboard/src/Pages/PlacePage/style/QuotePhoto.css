@@ -1,0 +1,19 @@
+.placetext {
+  height: 92vh;
+  width: 100%;
+}
+
+.placetext img {
+  height: 110%;
+  width: 100%;
+}
+.placequote {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(252, 252, 252);
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+}

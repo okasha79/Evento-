@@ -1,0 +1,74 @@
+.manage-movies {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  font-size: 24px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  text-align: left;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.image-avatar {
+  max-width: 100px;
+}
+
+.btn-danger,
+.btn-primary,
+.btn-info {
+  margin-right: 5px;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-group .btn {
+  margin-right: 10px;
+}
+
+.button-group .btn.active {
+  background-color: #b7318a;
+  color: white;
+}

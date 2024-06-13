@@ -1,0 +1,52 @@
+header {
+  text-align: left;
+  padding: 20px;
+  padding-right: 100px;
+}
+
+header h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: #c0b19b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #333333;
+  height: 90vh;
+}
+.headerAndImageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.bestsellerImage {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  margin-right: 200px;
+}
+
+.best-paragraph {
+  padding-top: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: rgba(251, 247, 249, 0.867);
+  padding-left: 130px;
+  padding-right: 50px;
+}

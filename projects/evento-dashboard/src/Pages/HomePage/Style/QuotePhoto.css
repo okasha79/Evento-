@@ -1,0 +1,34 @@
+.text {
+  height: 102vh;
+  width: 100%;
+}
+
+.text img {
+  height: 100%;
+  width: 100%;
+}
+
+.quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(252, 252, 252);
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+  text-align: center;
+  text-shadow: 5px 0px 5px black;
+  animation-name: info;
+  animation-duration: 5s;
+  animation-delay: 0.3s;
+}
+
+@keyframes info {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

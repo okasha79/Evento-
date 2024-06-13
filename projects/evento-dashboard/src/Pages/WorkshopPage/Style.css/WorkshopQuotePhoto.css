@@ -1,0 +1,21 @@
+.Workshoptext {
+  height: 95vh;
+  width: 100%;
+}
+
+.Workshoptext img {
+  height: 100%;
+  width: 100%;
+}
+
+.Workshopquote {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(14, 14, 14);
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+  padding-bottom: 50px;
+}

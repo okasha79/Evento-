@@ -1,0 +1,45 @@
+.Homesection {
+  background-color: #333333;
+}
+
+.Homesectionquote {
+  padding-top: 80px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: -80px;
+  font-size: 45px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  color: #c0b19b;
+}
+
+.HomeList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 102vh;
+  padding-top: 100px;
+}
+
+.HomeList .HomeProductCard a {
+  color: white;
+  text-decoration: none;
+}
+.HomeList:hover .card-background {
+  filter: brightness(0.3) saturate(0.5) blur(5px);
+}
+
+.HomeList:hover .vivo1 .hero-section .card-container .content {
+  background: rgba(0, 0, 0, 0);
+}
+.HomeList .vivo1 .hero-section .card-container .card:hover .card-background {
+  filter: brightness(1) saturate(1) blur(0);
+}
+
+.HomeList .vivo1 .hero-section .card-container .card:hover .content {
+  background: rgba(0, 0, 0, 0.6);
+  filter: brightness(1) saturate(1) blur(0);
+}

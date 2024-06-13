@@ -1,0 +1,15 @@
+.EngagementList {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 150vh;
+  margin-top: -200px;
+}
+
+.EngagementList .EngagementCard {
+  width: 20%;
+  margin: 20px 35px;
+}

@@ -1,0 +1,191 @@
+.payment {
+  margin-top: 110px;
+  width: 100%;
+  min-height: 80vh;
+  margin-left: 0%;
+  text-transform: capitalize;
+  font-size: x-large;
+}
+
+.cheackorder {
+  position: relative;
+  top: 150px;
+  left: 300px;
+}
+
+.card {
+  height: 350px;
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  font-family: Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 2rem auto;
+  width: 500px;
+  font-size: small;
+}
+
+.title {
+  text-align: center;
+  color: #1b1b1b;
+}
+
+.heading {
+  font-weight: bold;
+  letter-spacing: 7px;
+  font-size: 1.5rem;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.heading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #e8e8e8;
+  z-index: -1;
+  filter: blur(50px);
+  height: 50px;
+}
+
+.color {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hex {
+  text-align: end;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.black {
+  background: var(--black);
+  color: var(--ch-white);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.eerie-black {
+  background: var(--ch-black);
+  color: var(--ch-white);
+}
+
+.chinese-black {
+  background: var(--eer-black);
+  color: var(--ch-white);
+}
+
+.night-rider {
+  background: var(--night-rider);
+  color: var(--ch-white);
+}
+
+.chinese-white {
+  background: var(--ch-white);
+  color: var(--night-rider);
+}
+
+.anti-flash-white {
+  background: var(--af-white);
+  color: var(--night-rider);
+}
+
+.white {
+  background: var(--white);
+  color: var(--night-rider);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.border {
+  color: var(--night-rider);
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.border span {
+  border-radius: 5px;
+  color: var(--ch-white);
+  padding: 2px 4px;
+  background-color: var(--night-rider);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  left: 170px;
+  border-radius: 10rem;
+  transition: all 0.02s;
+  font-weight: bold;
+  color: rgb(37, 37, 37);
+  z-index: 0;
+  box-shadow: 0 0px 7px -5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(193, 228, 248);
+  color: rgb(33, 0, 85);
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scale(0.97);
+}
+
+.hoverEffect {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hoverEffect div {
+  background: rgb(222, 0, 75);
+  background: linear-gradient(
+    90deg,
+    rgb(0, 0, 0) 0%,
+    rgb(70, 67, 71) 49%,
+    rgb(137, 140, 141) 100%
+  );
+  border-radius: 40rem;
+  width: 10rem;
+  height: 10rem;
+  transition: 0.4s;
+  filter: blur(20px);
+  animation: effect infinite 3s linear;
+  opacity: 0.5;
+}
+
+.button:hover .hoverEffect div {
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

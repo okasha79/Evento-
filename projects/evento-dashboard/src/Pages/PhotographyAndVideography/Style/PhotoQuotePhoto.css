@@ -1,0 +1,20 @@
+.photographytext {
+  height: 95vh;
+  width: 100%;
+}
+
+.photographytext img {
+  height: 100%;
+  width: 100%;
+}
+.photographyquote {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(14, 14, 14);
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+  padding-bottom: 50px;
+}

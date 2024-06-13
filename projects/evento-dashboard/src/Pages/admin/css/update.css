@@ -1,0 +1,29 @@
+.update-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.update-container h1 {
+  margin-bottom: 20px;
+}
+
+.category-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.category-buttons .btn {
+  margin: 0 5px;
+}
+
+.update-container .form-control {
+  margin-bottom: 10px;
+}
+
+.update-container .btn {
+  margin-top: 20px;
+}

@@ -1,0 +1,58 @@
+.login-container {
+  max-width: 400px;
+  margin: 116px auto;
+  margin-top: 200px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.signup-container {
+  max-width: 400px;
+  margin: 116px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="name"],
+button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #d291bcad;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c563a4;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 40;
+}

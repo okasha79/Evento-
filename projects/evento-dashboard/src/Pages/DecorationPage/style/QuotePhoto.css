@@ -1,0 +1,19 @@
+.Decorationtext {
+  height: 104vh;
+  width: 100%;
+}
+
+.Decorationtext img {
+  height: 100%;
+  width: 100%;
+}
+.Decorationquote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(252, 252, 252);
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+}

@@ -1,0 +1,15 @@
+.ConcertList {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 150vh;
+  margin-top: 30px;
+}
+
+.ConcertList .ConcertCard {
+  width: 40%;
+  margin: 20px 35px;
+}
